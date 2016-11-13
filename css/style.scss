@@ -1,0 +1,166 @@
+#header .collapse {
+  padding-top: 50px;
+  padding-bottom: 15px;
+}
+
+#header .navbar-fixed-top > .container {
+  background: url("../img/menu_gorne_pasek.svg") no-repeat 100px 25px;
+}
+
+#header .navbar-fixed-top .navbar-brand {
+  padding: 15px;
+  height: auto;
+  width: auto;
+}
+
+#header .navbar-nav > li:before {
+  font-size: 30px;
+  padding-top: 4px;
+  content: '\2022';
+  float: left;
+}
+
+#header .navbar-nav > li:first-child:before {
+  content: ''
+}
+
+section h2 {
+  text-transform: uppercase;
+  color: darkgreen;
+}
+
+.separator-footer {
+  background-color: darkgreen;
+  height: 50px;
+}
+
+.separator-section {
+  height: 12px;
+  border-top: 3px solid darkgreen;
+  margin-top: 20px;
+  border-bottom: 6px solid yellowgreen;
+  margin-bottom: 20px;
+}
+
+footer {
+  background-color: #F5F5F5;
+}
+
+footer .img-responsive {
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+
+#organizers img {
+  width: 150px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  @media screen and (max-width: 768px) {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+#workshop-background p {
+  margin-top: 20px;
+}
+
+h2, h3 {
+  text-align: center;
+}
+
+#recipes {
+  position: relative;
+  background: rgba(154, 205, 50, 0.6);
+}
+
+#recipes:after {
+  position: absolute;
+  content : "";
+  display: block;
+  top: 0;
+  left: 0;
+  background-image: url("../img/carrot-kale-walnuts-tomatoes.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+#recipes .container h2 {
+  color: #fff;
+}
+
+#recipes .container p {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 20px;
+}
+
+.recipes-icons img {
+  width: 70px;
+  height: 70px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+#for-parents {
+  background-color: #F5F5F5;
+}
+
+#for-parents .list-item {
+  text-transform: uppercase;
+  padding: 20px;
+  display: block;
+  text-align: center;
+}
+
+#gallery img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.gallery-item {
+  position: relative;
+}
+
+.gallery-description {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 100, 0, 0.6);
+  color: white;
+  opacity: 0;
+  font-size: 30px;
+  text-align: center;
+}
+
+.gallery-item:hover .gallery-description {
+  opacity: 1;
+}
+
+#profile .row-title {
+  color: darkgreen;
+  font-weight: bold;
+}
+
+#news {
+  background-color: #F5F5F5;
+}
+
+#news img {
+  max-width: 100%;
+  height: auto;
+}
+
+#news .text-box {
+  margin-top: 10px;
+}
+
+#news .img-box {
+  margin-top: 10px;
+}
