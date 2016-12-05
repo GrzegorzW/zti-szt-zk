@@ -1,3 +1,6 @@
+$small: 768px;
+$grey-color: #F5F5F5;
+
 img {
   max-width: 100%;
   height: auto;
@@ -9,31 +12,44 @@ h2, h3 {
 
 body {
   padding-top: 50px;
+  @media screen and (min-width: $small) {
+    padding-top: 140px;
+  }
+}
+
+.background-grey {
+  background-color: $grey-color;
 }
 
 #header {
   text-transform: uppercase;
 
-  @media screen and (min-width: 768px) {
-    .navbar {
+  @media screen and (min-width: $small) {
+    .navbar-collapse {
       background: url("../img/menu_gorne_pasek.svg") no-repeat 100px 25px;
     }
 
-    .navbar-nav > li:before {
+    .navbar-nav {
+      padding-top: 53px;
+    }
+
+    .navbar-nav > li + li:before {
       font-size: 30px;
       padding-top: 4px;
       content: '\2022';
       float: left;
       color: darkgreen;
     }
+  }
 
-    .navbar-nav > li:first-child:before {
-      content: ''
-    }
+  .brand-logo img {
+    max-height: 140px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: $small) {
   .brand-logo img {
     margin: 5px;
     height: 40px;
@@ -59,8 +75,6 @@ section h2 {
 }
 
 footer {
-  background-color: #F5F5F5;
-
   .img-responsive {
     margin-top: 70px;
     margin-bottom: 70px;
@@ -73,7 +87,7 @@ footer {
   margin-top: 20px;
   margin-bottom: 20px;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: $small) {
     margin-right: auto;
     margin-left: auto;
   }
@@ -119,8 +133,6 @@ footer {
 }
 
 #for-parents {
-  background-color: #F5F5F5;
-
   .list-item {
     text-transform: uppercase;
     padding: 20px;
@@ -183,8 +195,6 @@ footer {
 }
 
 #news {
-  background-color: #F5F5F5;
-
   .text-box {
     margin-top: 10px;
   }
@@ -202,4 +212,19 @@ footer {
   h5 {
     color: darkgreen;
   }
+}
+
+.decorated-header:before {
+  background: url("../img/heading_top.png") no-repeat center center;
+  content: '';
+  height: 44px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.decorated-header:after {
+  background: url("../img/heading_bottom.png") no-repeat center center;
+  content: '';
+  height: 20px;
+  display: block;
 }
