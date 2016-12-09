@@ -298,17 +298,9 @@ footer {
   }
 }
 
-.decorated-header:before {
-  background: url("../img/heading_top.png") no-repeat center center;
-  content: '';
-  height: 44px;
-  margin-bottom: 10px;
-  display: block;
-}
-
-.decorated-header:after {
-  background: url("../img/heading_bottom.png") no-repeat center center;
-  content: '';
-  height: 20px;
-  display: block;
+.leaf {
+  height: 50px;
+  width: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
