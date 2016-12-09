@@ -2,40 +2,56 @@ img {
   max-width: 100%;
   height: auto; }
 
+body {
+  padding-top: 50px; }
+
 h2, h3 {
   text-align: center; }
 
-body {
-  padding-top: 50px; }
-  @media screen and (min-width: 768px) {
-    body {
-      padding-top: 140px; } }
-
 .background-grey {
-  background-color: #F5F5F5; }
+  background-color: #ECECEC; }
 
 #header {
   text-transform: uppercase; }
-  @media screen and (min-width: 768px) {
-    #header .navbar-collapse {
-      background: url("../img/menu_gorne_pasek.svg") no-repeat 100px 25px; }
-    #header .navbar-nav {
-      padding-top: 53px; }
+  @media screen and (min-width: 1200px) {
     #header .navbar-nav > li + li:before {
       font-size: 30px;
       padding-top: 4px;
       content: '\2022';
       float: left;
       color: darkgreen; } }
-  #header .brand-logo img {
-    max-height: 140px;
-    padding-top: 10px;
-    padding-bottom: 10px; }
+  @media screen and (max-width: 1200px) {
+    #header {
+      /* since 3.1.0 */ }
+      #header .navbar-header {
+        float: none; }
+      #header .navbar-toggle {
+        display: block; }
+      #header .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1); }
+      #header .navbar-collapse.collapse {
+        display: none !important; }
+      #header .navbar-nav {
+        float: none !important;
+        margin: 7.5px -15px; }
+      #header .navbar-nav > li {
+        float: none; }
+      #header .navbar-nav > li > a {
+        padding-top: 10px;
+        padding-bottom: 10px; }
+      #header .navbar-text {
+        float: none;
+        margin: 15px 0; }
+      #header .navbar-collapse.collapse.in {
+        display: block !important; }
+      #header .collapsing {
+        overflow: hidden !important; } }
 
-@media screen and (max-width: 768px) {
-  .brand-logo img {
-    margin: 5px;
-    height: 40px; } }
+.brand-logo img {
+  margin: 5px;
+  height: 40px; }
+
 section h2 {
   text-transform: uppercase;
   color: darkgreen; }
@@ -96,9 +112,61 @@ footer .img-responsive {
 
 #for-parents .list-item {
   text-transform: uppercase;
-  padding: 20px;
-  display: block;
-  text-align: center; }
+  padding: 20px 100px 20px 40px;
+  text-align: left;
+  position: relative;
+  list-style-type: none;
+  height: 100px;
+  float: left;
+  width: 100%; }
+  @media only screen and (min-width: 768px) {
+    #for-parents .list-item {
+      width: 50%; } }
+  @media screen and (min-width: 992px) {
+    #for-parents .list-item {
+      width: 33%; }
+      #for-parents .list-item:before {
+        content: '';
+        background-image: url("../img/cross.png");
+        display: block;
+        height: 25px;
+        width: 25px;
+        background-size: contain;
+        position: absolute;
+        top: -10px;
+        left: -40px; }
+      #for-parents .list-item:nth-child(3n+0):after {
+        content: '';
+        background-image: url("../img/cross.png");
+        display: block;
+        height: 25px;
+        width: 25px;
+        background-size: contain;
+        position: absolute;
+        right: 40px;
+        top: -10px; }
+      #for-parents .list-item:nth-last-child(-n+3) {
+        margin-bottom: 50px; }
+        #for-parents .list-item:nth-last-child(-n+3) > span:before {
+          content: '';
+          background-image: url("../img/cross.png");
+          display: block;
+          height: 25px;
+          width: 25px;
+          background-size: contain;
+          position: absolute;
+          bottom: -10px;
+          left: -40px; }
+      #for-parents .list-item:last-child > span:after {
+        content: '';
+        background-image: url("../img/cross.png");
+        display: block;
+        height: 25px;
+        width: 25px;
+        background-size: contain;
+        position: absolute;
+        right: 40px;
+        bottom: -10px; } }
 
 .gallery-item {
   position: relative;
