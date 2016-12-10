@@ -98,17 +98,21 @@ footer .img-responsive {
     height: 100%;
     z-index: -1; }
   #recipes .container h2 {
-    color: #fff; }
+    color: white; }
   #recipes .container p {
     text-transform: uppercase;
-    color: #fff;
+    color: white;
     font-size: 20px; }
 
-.recipes-icons img {
+.recipes-icons svg {
   width: 70px;
   height: 70px;
   margin-top: 30px;
   margin-bottom: 30px; }
+  .recipes-icons svg:hover path {
+    fill: darkgreen; }
+  .recipes-icons svg:hover ~ p {
+    color: darkgreen !important; }
 
 #for-parents .list-item {
   text-transform: uppercase;

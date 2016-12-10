@@ -136,21 +136,29 @@ footer {
   }
 
   .container h2 {
-    color: #fff;
+    color: white;
   }
 
   .container p {
     text-transform: uppercase;
-    color: #fff;
+    color: white;
     font-size: 20px;
   }
 }
 
-.recipes-icons img {
+.recipes-icons svg {
   width: 70px;
   height: 70px;
   margin-top: 30px;
   margin-bottom: 30px;
+
+  &:hover path {
+    fill: darkgreen;
+  }
+
+  &:hover ~ p {
+    color: darkgreen !important;
+  }
 }
 
 #for-parents {
